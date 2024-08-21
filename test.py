@@ -1,5 +1,5 @@
 import unittest
-from calculator import complex_sum, complex_subtract, complex_mult, complex_division, complex_carter2polar, complex_polar2carte, complex_phase, module,conjugate
+from complejos1 import complex_sum, complex_subtract, complex_mult, complex_division, complex_corte2polar, complex_polar2carte, complex_phase, module,conjugate
 
 class TestComplex(unittest.TestCase):
 
@@ -16,14 +16,14 @@ class TestComplex(unittest.TestCase):
         self.assertEqual(complex_division([0, -3],[-1, -1]), (1.5, 1.5))
         self.assertEqual(complex_division([0, 0],[0, -1]), (0, 0))
     def test_carte2polar(self):
-        self.asserEqual(carte2polar([1, -1]),(1.4142135623730951, -0.7853981633974483))
-        self.asserEqual(carte2polar([-2, 1]),(2.23606797749979, -0.4636476090008061))
+        self.assertEqual(complex_corte2polar([1, -1]),(1.4142135623730951, -0.7853981633974483))
+        self.assertEqual(complex_corte2polar([-2, 1]),(2.23606797749979, -0.4636476090008061))
     def test_polar2corte(self):
-        self.asserEqual(polar2carte([2.24, -0.46]),(4.589293016703022, -1.0707092446824535))
-        self.asserEqual(polar2carte([2, 0], (3.141592653589793, 0.0)))
+        self.assertEqual(complex_polar2carte([2.24, -0.46]),(4.589293016703022, -1.0707092446824535))
+        self.assertEqual(complex_polar2carte([2, 0]), (3.141592653589793, 0.0))
     def test_phase(self):
-        self.asserEqual(complex_phase([5, 5]), 0.7853981633974483)
-        self.asserEqual(complex_phase([1, 0]), 0.0)
+        self.assertEqual(complex_phase([5, 5]), 0.7853981633974483)
+        self.assertEqual(complex_phase([1, 0]), 0.0)
     def test_module(self):
         self.assertEqual(module([4, -3]),5.0)
         self.assertEqual(module([4, 3]),5.0)
