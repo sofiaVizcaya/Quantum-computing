@@ -1,5 +1,5 @@
 import unittest
-from complejos1 import complex_sum, complex_subtract, complex_mult, complex_division, complex_corte2polar, complex_polar2carte, complex_phase, module,conjugate
+from calculator import complex_sum, complex_subtract, complex_mult, complex_division, complex_corte2polar, complex_polar2carte, complex_phase, module,conjugate
 
 class TestComplex(unittest.TestCase):
 
